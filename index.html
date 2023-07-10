@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Pokerpad</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        span {
+            cursor: pointer;
+        }
+
+        span.active {
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col justify-center items-center gap-8 w-screen h-screen">
+        <div class="grid text-9xl" style="grid-template-columns: repeat(13, minmax(0, 1fr));">
+            <span>🂣</span>
+            <span>🂤</span>
+            <span>🂥</span>
+            <span>🂦</span>
+            <span>🂧</span>
+            <span>🂨</span>
+            <span>🂩</span>
+            <span>🂪</span>
+            <span>🂫</span>
+            <span>🂭</span>
+            <span>🂮</span>
+            <span>🂡</span>
+            <span>🂢</span>
+            <span class="text-red-500">🂳</span>
+            <span class="text-red-500">🂴</span>
+            <span class="text-red-500">🂵</span>
+            <span class="text-red-500">🂶</span>
+            <span class="text-red-500">🂷</span>
+            <span class="text-red-500">🂸</span>
+            <span class="text-red-500">🂹</span>
+            <span class="text-red-500">🂺</span>
+            <span class="text-red-500">🂻</span>
+            <span class="text-red-500">🂽</span>
+            <span class="text-red-500">🂾</span>
+            <span class="text-red-500">🂱</span>
+            <span class="text-red-500">🂲</span>
+            <span>🃓</span>
+            <span>🃔</span>
+            <span>🃕</span>
+            <span>🃖</span>
+            <span>🃗</span>
+            <span>🃘</span>
+            <span>🃙</span>
+            <span>🃚</span>
+            <span>🃛</span>
+            <span>🃝</span>
+            <span>🃞</span>
+            <span>🃑</span>
+            <span>🃒</span>
+            <span class="text-red-500">🃃</span>
+            <span class="text-red-500">🃄</span>
+            <span class="text-red-500">🃅</span>
+            <span class="text-red-500">🃆</span>
+            <span class="text-red-500">🃇</span>
+            <span class="text-red-500">🃈</span>
+            <span class="text-red-500">🃉</span>
+            <span class="text-red-500">🃊</span>
+            <span class="text-red-500">🃋</span>
+            <span class="text-red-500">🃍</span>
+            <span class="text-red-500">🃎</span>
+            <span class="text-red-500">🃁</span>
+            <span class="text-red-500">🃂</span>
+        </div>
+
+        <div>
+            <button class="px-5 py-2.5 bg-gray-600 rounded text-white hover:bg-gray-800" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <script>
+        function reset() {
+            document.querySelectorAll('span.active').forEach(element => element.classList.remove('active'));
+        }
+
+        document.addEventListener('click', function (e) {
+            if (e.target.tagName === 'SPAN') {
+                e.target.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>
